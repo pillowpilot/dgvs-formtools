@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>test_form_1 - Form Builder View</h1>
+
+<table cellpadding="2" cellspacing="0" width="100%" class="print_table">
+<tr>
+        <th>ID</th>
+        <th>Field 1</th>
+        <th>Field 2</th>
+        <th>Field 3</th>
+        <th>Field 4</th>
+        <th>Field 5</th>
+        <th>Date</th>
+        <th>Last modified</th>
+        <th>IP Address</th>
+    
+</tr>
+<tr><td>1</td><td>something</td><td>1</td><td>2</td><td>3</td><td>last item</td><td>2022-08-27 6:06 PM</td><td>2022-08-27 6:06 PM</td><td>127.0.0.1</td></tr>
+</table>
+
+</body>
+</html>
