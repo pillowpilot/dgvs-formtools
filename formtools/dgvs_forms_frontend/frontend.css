@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template: 50px 1fr / 120px 1fr;
+    /* rows / cols */
+}
+
+body>nav {
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #107cbb;
+}
+
+body>nav>.nav-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #107cbb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    color: #050505;
+    text-decoration: none;
+    transform: background-color 1s ease-in-out;
+}
+
+body>nav>.nav-option:hover {
+    background-color: #6ec3f5;
+}
+
+body>nav>.nav-option>img {
+    width: 2rem;
+}
+
+body>main {
+    grid-area: 2 / 2 / span 1 / span 1;
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template: 50px 1fr / 300px 1fr;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+body>main>header {
+    grid-area: 1 / 1/ span 1 / -1;
+    background-color: aqua;
+}
+
+body>main>aside {
+    position: sticky;
+    top: .5rem;
+    align-self: start;
+    background-color: red;
+}
+
+body>main>aside>.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0.4rem;
+}
+
+body>main>aside>.accordion>div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #009578;
+}
+
+body>main>aside>.accordion input {
+    display: none;
+}
+
+body>main>aside>.accordion label {
+    padding: 0.8rem;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+body>main>aside>.accordion label:hover {
+    background-color: #00b39e;
+}
+
+body>main>aside>.accordion .content {
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0 1rem;
+    background-color: rgb(218, 218, 218);
+}
+
+body>main>aside>.accordion input:checked~.content {
+    height: auto;
+}
+
+body>main>aside>.accordion .content>button:first-child {
+    margin-top: 0.2rem;
+}
+
+body>main>aside>.accordion .content>button:last-child {
+    margin-bottom: 0.2rem;
+}
+
+body>main>aside>.accordion .content>button {
+    padding: 0.4rem;
+    background-color: #b3b3b3;
+    color: #000000;
+    font-size: 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+}
+
+body>main>aside>.accordion .content>button:hover {
+    background-color: #888888;
+}
+
+body>main>aside>.accordion .content>button>img {
+    vertical-align: baseline;
+}
+
+body>main>section {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    background-color: white;
+}
+
+body>main>section>form {
+    grid-column: 2 / span 1;
+}

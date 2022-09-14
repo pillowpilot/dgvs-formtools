@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap v5.2.0 - CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="frontend.css">
+    <title>Frontend prototype</title>
+</head>
+
+<body>
+    <header>
+        <h3>TITULO</h3>
+    </header>
+    <nav>
+        <a class="nav-option" href="#">
+            <img src="frontend_icons/list-ul.svg" alt="Form Icon">
+            <p>Diseñar Ficha</p>
+        </a>
+        <a class="nav-option" href="#">
+            <img src="frontend_icons/list-ul.svg" alt="Form icon">
+            <p>Option 2</p>
+        </a>
+        <a class="nav-option" href="#">
+            <img src="frontend_icons/list-ul.svg" alt="Form icon">
+            <p>Option 3</p>
+        </a>
+    </nav>
+    <main>
+        <header></header>
+        <aside>
+            <div class="accordion">
+                <div>
+                    <input type="checkbox" name="aside-accordion" id="menu1">
+                    <label for="menu1">Campos Disponibles</label>
+                    <div class="content">
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Datos Paciente</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Datos Notificante</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Textinput</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Fecha</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Lista de Checkboxes</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Checkbox Único</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Lista de Radios</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Radio Único</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Dropdown</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Some button</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Some button</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Some button</button>
+
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="aside-accordion" id="menu2">
+                    <label for="menu2">Menu 2</label>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloremque possimus voluptatem
+                        veritatis saepe voluptate, illo et officia natus suscipit facilis. Pariatur a dicta nam!
+                        Blanditiis numquam exercitationem iure corrupti!
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="aside-accordion" id="menu3">
+                    <label for="menu3">Operaciones Finales</label>
+                    <div class="content">
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Exportar a JSON</button>
+                        <button><img src="frontend_icons/fonts.svg" alt="Textinput icon">Enviar a la Base de
+                            Datos</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section>
+
+            <form method="post">
+                <div class="form-intro"></div>
+
+                <div class="form-section" namespace="">
+                    <div class="section-header"><span>The title of the page</span></div>
+                    <div class="section-content">
+                        <div class="form-section" namespace="datos-paciente">
+                            <div class="section-header"><span>Datos Generales del Paciente</span></div>
+                            <div class="section-content">Unknown node type: ci_paciente (datos-paciente_) <br></div>
+                        </div>
+                        <div class="form-section" namespace="datos-notificante">
+                            <div class="section-header"><span>Datos Generales del Notificante</span></div>
+                            <div class="section-content">Unknown node type: ci_notificante (datos-notificante_) <br>
+                            </div>
+                        </div>
+                        <div class="form-section" namespace="riesgo-exposicion">
+                            <div class="section-header"><span>Antecedentes de Riesgo y Exposición</span></div>
+                            <div class="section-content">
+                                <div class="form-section" namespace="alimentario">
+                                    <div class="section-header"><span>Alimentario</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label
+                                                for="riesgo-exposicion_alimentario_sospechosos">Alimentos
+                                                sospechosos</label><input type="text"
+                                                name="riesgo-exposicion_alimentario_sospechosos"
+                                                id="riesgo-exposicion_alimentario_sospechosos" class="form-control">
+                                        </div>
+                                        <div class="field-group"><label for="riesgo-exposicion_alimentario_tipo">Tipo de
+                                                Alimento</label><input type="text"
+                                                name="riesgo-exposicion_alimentario_tipo"
+                                                id="riesgo-exposicion_alimentario_tipo" class="form-control"></div>
+                                        <div class="field-group"><label for="riesgo-exposicion_alimentario_fecha">Fecha
+                                                de consumo</label><input type="date"
+                                                name="riesgo-exposicion_alimentario_fecha"
+                                                id="riesgo-exposicion_alimentario_fecha" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="form-section" namespace="lactante">
+                                    <div class="section-header"><span>Lactante</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label for="riesgo-exposicion_lactante_TODO">Tipo de
+                                                Alimentación</label><select name="riesgo-exposicion_lactante_TODO"
+                                                id="riesgo-exposicion_lactante_TODO" class="form-select">
+                                                <option value="">Sin Datos</option>
+                                                <option value="a-pecho">Solo alimentación a pecho</option>
+                                                <option value="pecho-leche-formula">Pecho y leche de formula</option>
+                                                <option value="leche-formula">Leche de formula</option>
+                                            </select></div>
+                                        <div class="field-group">
+                                            <fieldset class="form-group border rounded-3 p-3">
+                                                <legend class="float-none w-auto px-3">Consumo de</legend>
+                                                <div class="form-check"><input type="checkbox"
+                                                        name="riesgo-exposicion_lactante_miel"
+                                                        id="riesgo-exposicion_lactante_miel"
+                                                        class="form-check-input"><label
+                                                        for="riesgo-exposicion_lactante_miel"
+                                                        class="form-check-label">Miel</label></div>
+                                                <div class="form-check"><input type="checkbox"
+                                                        name="riesgo-exposicion_lactante_jarabe-de-maiz"
+                                                        id="riesgo-exposicion_lactante_jarabe-de-maiz"
+                                                        class="form-check-input"><label
+                                                        for="riesgo-exposicion_lactante_jarabe-de-maiz"
+                                                        class="form-check-label">Jarabe de Maíz</label></div>
+                                                <div class="form-check"><input type="checkbox"
+                                                        name="riesgo-exposicion_lactante_infusiones-caseras"
+                                                        id="riesgo-exposicion_lactante_infusiones-caseras"
+                                                        class="form-check-input"><label
+                                                        for="riesgo-exposicion_lactante_infusiones-caseras"
+                                                        class="form-check-label">Infusiones Caseras</label></div>
+                                                <div class="form-check"><input type="checkbox"
+                                                        name="riesgo-exposicion_lactante_jugo"
+                                                        id="riesgo-exposicion_lactante_jugo"
+                                                        class="form-check-input"><label
+                                                        for="riesgo-exposicion_lactante_jugo"
+                                                        class="form-check-label">Jugo</label></div>
+                                                <div class="form-check"><input type="checkbox"
+                                                        name="riesgo-exposicion_lactante_cereales"
+                                                        id="riesgo-exposicion_lactante_cereales"
+                                                        class="form-check-input"><label
+                                                        for="riesgo-exposicion_lactante_cereales"
+                                                        class="form-check-label">Cereales</label></div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-section" namespace="heridas">
+                                    <div class="section-header"><span>Por heridas</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label for="riesgo-exposicion_heridas_TODO">Tipo de
+                                                Herida</label><select name="riesgo-exposicion_heridas_TODO"
+                                                id="riesgo-exposicion_heridas_TODO" class="form-select">
+                                                <option value="">Sin Datos</option>
+                                                <option value="accidental">Accidental</option>
+                                                <option value="quirurgica">Quirurgica</option>
+                                                <option value="drogas-intravenosas">Uso de drogas intravenosas</option>
+                                            </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section" namespace="antecedentes-clinicos">
+                            <div class="section-header"><span>Antecedentes Clínicos y de Hospitalización</span></div>
+                            <div class="section-content">
+                                <div class="field-group"><label for="antecedentes-clinicos_inicio-sintomas">Inicio de
+                                        Sintomas</label><input type="date" name="antecedentes-clinicos_inicio-sintomas"
+                                        id="antecedentes-clinicos_inicio-sintomas" class="form-control"></div>
+                                <div class="field-group"><label for="antecedentes-clinicos_primera-consulta">Primera
+                                        consulta</label><input type="date" name="antecedentes-clinicos_primera-consulta"
+                                        id="antecedentes-clinicos_primera-consulta" class="form-control"></div>
+                                <div class="field-group"><label for="antecedentes-clinicos_centro">Centro</label><input
+                                        type="text" name="antecedentes-clinicos_centro"
+                                        id="antecedentes-clinicos_centro" class="form-control"></div>
+                                <div class="field-group">
+                                    <div class="form-check"><input type="checkbox"
+                                            name="antecedentes-clinicos_hospitalizacion"
+                                            id="antecedentes-clinicos_hospitalizacion" class="form-check-input"><label
+                                            for="antecedentes-clinicos_hospitalizacion"
+                                            class="form-check-label">Hospitalizacion</label></div>
+                                </div>
+                                <div class="field-group"><label for="antecedentes-clinicos_fecha-hospitalizacion">Fecha
+                                        de Hospitalización</label><input type="date"
+                                        name="antecedentes-clinicos_fecha-hospitalizacion"
+                                        id="antecedentes-clinicos_fecha-hospitalizacion" class="form-control"></div>
+                                <div class="field-group"><label for="antecedentes-clinicos_diagnostico">Diagnostico de
+                                        Ingreso</label><input type="text" name="antecedentes-clinicos_diagnostico"
+                                        id="antecedentes-clinicos_diagnostico" class="form-control"></div>
+                                <div class="field-group">
+                                    <fieldset class="form-group border rounded-3 p-3">
+                                        <legend class="float-none w-auto px-3">Signos y Sintomas</legend>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_vision-borrosa"
+                                                id="antecedentes-clinicos_vision-borrosa"
+                                                class="form-check-input"><label
+                                                for="antecedentes-clinicos_vision-borrosa"
+                                                class="form-check-label">Vision Borrosa</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_disfagia"
+                                                id="antecedentes-clinicos_disfagia" class="form-check-input"><label
+                                                for="antecedentes-clinicos_disfagia"
+                                                class="form-check-label">Disfagia</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_diplopia"
+                                                id="antecedentes-clinicos_diplopia" class="form-check-input"><label
+                                                for="antecedentes-clinicos_diplopia"
+                                                class="form-check-label">Diplopia</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_ptosis" id="antecedentes-clinicos_ptosis"
+                                                class="form-check-input"><label for="antecedentes-clinicos_ptosis"
+                                                class="form-check-label">Ptosis palpebral bilateral</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_paralisis"
+                                                id="antecedentes-clinicos_paralisis" class="form-check-input"><label
+                                                for="antecedentes-clinicos_paralisis" class="form-check-label">Paralisis
+                                                flácida descendente</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_reflejo-fotomotor"
+                                                id="antecedentes-clinicos_reflejo-fotomotor"
+                                                class="form-check-input"><label
+                                                for="antecedentes-clinicos_reflejo-fotomotor"
+                                                class="form-check-label">Ausencia de reflejo fotomotor</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_conciencia"
+                                                id="antecedentes-clinicos_conciencia" class="form-check-input"><label
+                                                for="antecedentes-clinicos_conciencia"
+                                                class="form-check-label">Conciencia conservada</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_respiratoria"
+                                                id="antecedentes-clinicos_respiratoria" class="form-check-input"><label
+                                                for="antecedentes-clinicos_respiratoria"
+                                                class="form-check-label">Dificultad Respiratoria</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_inapetencia"
+                                                id="antecedentes-clinicos_inapetencia" class="form-check-input"><label
+                                                for="antecedentes-clinicos_inapetencia"
+                                                class="form-check-label">Inapetencia</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_hipotonia"
+                                                id="antecedentes-clinicos_hipotonia" class="form-check-input"><label
+                                                for="antecedentes-clinicos_hipotonia"
+                                                class="form-check-label">Hipotonia</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_control-cefalico"
+                                                id="antecedentes-clinicos_control-cefalico"
+                                                class="form-check-input"><label
+                                                for="antecedentes-clinicos_control-cefalico"
+                                                class="form-check-label">Perdida del control cefálico</label></div>
+                                    </fieldset>
+                                </div>
+                                <div class="field-group">
+                                    <fieldset class="form-group border rounded-3 p-3">
+                                        <legend class="float-none w-auto px-3">Sintomas previos al cuadro neurológico
+                                        </legend>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_constipacion"
+                                                id="antecedentes-clinicos_constipacion" class="form-check-input"><label
+                                                for="antecedentes-clinicos_constipacion"
+                                                class="form-check-label">Constipación</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_vertigo" id="antecedentes-clinicos_vertigo"
+                                                class="form-check-input"><label for="antecedentes-clinicos_vertigo"
+                                                class="form-check-label">Vértigo</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_nausea/vomito"
+                                                id="antecedentes-clinicos_nausea/vomito" class="form-check-input"><label
+                                                for="antecedentes-clinicos_nausea/vomito"
+                                                class="form-check-label">Náusea/Vómitos</label></div>
+                                        <div class="form-check"><input type="checkbox"
+                                                name="antecedentes-clinicos_fiebre" id="antecedentes-clinicos_fiebre"
+                                                class="form-check-input"><label for="antecedentes-clinicos_fiebre"
+                                                class="form-check-label">Fiebre</label></div>
+                                    </fieldset>
+                                </div>
+                                <div class="field-group">
+                                    <div class="form-check"><input type="checkbox" name="antecedentes-clinicos_arm"
+                                            id="antecedentes-clinicos_arm" class="form-check-input"><label
+                                            for="antecedentes-clinicos_arm" class="form-check-label">Uso de ARM</label>
+                                    </div>
+                                </div>
+                                <div class="field-group">
+                                    <div class="form-check"><input type="checkbox"
+                                            name="antecedentes-clinicos_antitoxina"
+                                            id="antecedentes-clinicos_antitoxina" class="form-check-input"><label
+                                            for="antecedentes-clinicos_antitoxina"
+                                            class="form-check-label">Antitoxina</label></div>
+                                </div>
+                                <div class="field-group"><label for="antecedentes-clinicos_demora-administracion">Demora
+                                        de Administracion (horas)</label><input type="text"
+                                        name="antecedentes-clinicos_demora-administracion"
+                                        id="antecedentes-clinicos_demora-administracion" class="form-control"></div>
+                            </div>
+                        </div>
+                        <div class="form-section" namespace="laboratorio">
+                            <div class="section-header"><span>Datos de Laboratorio</span></div>
+                            <div class="section-content">
+                                <div class="form-section" namespace="suero">
+                                    <div class="section-header"><span>Suero</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label
+                                                for="laboratorio_suero_fecha">Fecha</label><input type="date"
+                                                name="laboratorio_suero_fecha" id="laboratorio_suero_fecha"
+                                                class="form-control"></div>
+                                        <div class="field-group"><label
+                                                for="laboratorio_suero_resultado">Resultado</label><input type="text"
+                                                name="laboratorio_suero_resultado" id="laboratorio_suero_resultado"
+                                                class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="form-section" namespace="fecal">
+                                    <div class="section-header"><span>Materia Fecal</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label
+                                                for="laboratorio_fecal_fecha">Fecha</label><input type="date"
+                                                name="laboratorio_fecal_fecha" id="laboratorio_fecal_fecha"
+                                                class="form-control"></div>
+                                        <div class="field-group"><label
+                                                for="laboratorio_fecal_resultado">Resultado</label><input type="text"
+                                                name="laboratorio_fecal_resultado" id="laboratorio_fecal_resultado"
+                                                class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="form-section" namespace="aspirado">
+                                    <div class="section-header"><span>Aspirado Gastrico</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label
+                                                for="laboratorio_aspirado_fecha">Fecha</label><input type="date"
+                                                name="laboratorio_aspirado_fecha" id="laboratorio_aspirado_fecha"
+                                                class="form-control"></div>
+                                        <div class="field-group"><label
+                                                for="laboratorio_aspirado_resultado">Resultado</label><input type="text"
+                                                name="laboratorio_aspirado_resultado"
+                                                id="laboratorio_aspirado_resultado" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="form-section" namespace="alimento">
+                                    <div class="section-header"><span>Alimento Sospechoso</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label
+                                                for="laboratorio_alimento_fecha">Fecha</label><input type="date"
+                                                name="laboratorio_alimento_fecha" id="laboratorio_alimento_fecha"
+                                                class="form-control"></div>
+                                        <div class="field-group"><label
+                                                for="laboratorio_alimento_resultado">Resultado</label><input type="text"
+                                                name="laboratorio_alimento_resultado"
+                                                id="laboratorio_alimento_resultado" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="form-section" namespace="herida">
+                                    <div class="section-header"><span>Material de Herida</span></div>
+                                    <div class="section-content">
+                                        <div class="field-group"><label
+                                                for="laboratorio_herida_fecha">Fecha</label><input type="date"
+                                                name="laboratorio_herida_fecha" id="laboratorio_herida_fecha"
+                                                class="form-control"></div>
+                                        <div class="field-group"><label
+                                                for="laboratorio_herida_resultado">Resultado</label><input type="text"
+                                                name="laboratorio_herida_resultado" id="laboratorio_herida_resultado"
+                                                class="form-control"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section" namespace="egreso">
+                            <div class="section-header"><span>Condición de Egreso</span></div>
+                            <div class="section-content">
+                                <div class="field-group"><label for="egreso_fecha">Fecha de Egreso</label><input
+                                        type="date" name="egreso_fecha" id="egreso_fecha" class="form-control"></div>
+                                <div class="field-group">
+                                    <fieldset class="form-group border rounded-3 p-3">
+                                        <legend class="float-none w-auto px-3">Tipo de Egreso</legend>
+                                        <div class="form-check"><input type="radio" name="egreso_alta" id="egreso_alta"
+                                                class="form-check-input"><label for="egreso_alta"
+                                                class="form-check-label">Alta</label></div>
+                                        <div class="form-check"><input type="radio" name="egreso_traslado"
+                                                id="egreso_traslado" class="form-check-input"><label
+                                                for="egreso_traslado" class="form-check-label">Traslado</label></div>
+                                        <div class="form-check"><input type="radio" name="egreso_fallecimiento"
+                                                id="egreso_fallecimiento" class="form-check-input"><label
+                                                for="egreso_fallecimiento"
+                                                class="form-check-label">Fallecimiento</label></div>
+                                    </fieldset>
+                                </div>
+                                <div class="field-group"><label for="egreso_establecimiento">Establecimiento de
+                                        transferencia</label><input type="text" name="egreso_establecimiento"
+                                        id="egreso_establecimiento" class="form-control"></div>
+                            </div>
+                        </div>Unknown node type: submit () <br>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+
+</html>
