@@ -3,6 +3,9 @@
 require_once './widgets/Checkbox.class.php';
 require_once './widgets/SingleCheckbox.class.php';
 require_once './widgets/ListOfCheckboxes.class.php';
+require_once './widgets/Radio.class.php';
+require_once './widgets/SingleRadio.class.php';
+require_once './widgets/ListOfRadios.class.php';
 require_once './widgets/Select.class.php';
 require_once './widgets/TextInput.class.php';
 require_once './widgets/DateInput.class.php';
@@ -10,6 +13,9 @@ require_once './widgets/DateInput.class.php';
 use Widgets\Checkbox;
 use Widgets\SingleCheckbox;
 use Widgets\ListOfCheckboxes;
+use Widgets\Radio;
+use Widgets\SingleRadio;
+use Widgets\ListOfRadios;
 use Widgets\Select;
 use Widgets\TextInput;
 use Widgets\DateInput;
@@ -47,7 +53,7 @@ abstract class NodeProcessor
             return $attrs[$attributeName];
         }
 
-        return new Exception('Attribute ' . $attributeName . ' not found');
+        throw new Exception('Attribute <' . $attributeName . '> not found. Node: ' . print_r($node, true));
     }
     public function renderPrefix()
     {
@@ -180,10 +186,12 @@ class CheckboxProcessor extends NodeProcessor
 
     public function __construct($node, $namespace)
     {
-        $this->legend = $this->getAttribute($node, 'label');
-        $this->name = 'TODO'; // TODO
         $this->options = $this->getAttribute($node, 'options');
+        $this->name = $this->getAttribute($node, 'name');
         $this->namespace = $namespace;
+        if (count($this->options) > 1) {
+            $this->legend = $this->getAttribute($node, 'label');
+        }
     }
 
     public function renderPrefix()
@@ -205,6 +213,43 @@ class CheckboxProcessor extends NodeProcessor
             return $listOfCheckboxes->render();
         }
     }
+}
+
+class RadioProcessor extends NodeProcessor
+{
+    public $legend;
+    public $name;
+    public $options;
+    public $namespace;
+
+    public function __construct($node, $namespace)
+    {
+        $this->legend = $this->getAttribute($node, 'label');
+        $this->name = $this->getAttribute($node, 'name');
+        $this->options = $this->getAttribute($node, 'options');
+        $this->namespace = $namespace;
+    }
+
+    public function renderPrefix()
+    {
+        if (count($this->options) === 1 )
+        {
+            $option = $this->options[0];
+            $singleRadio = new SingleRadio($option['label'], $option['value'], $this->namespace);
+            return $singleRadio->render();
+        }
+        else
+        {
+            $listOfRadios = new ListOfRadios($this->legend);
+
+            foreach ($this->options as $option) {
+                $listOfRadios->addRadio(new Radio($option['label'], $option['value'], $this->namespace));
+            }
+
+            return $listOfRadios->render();
+        }
+    }
+
 }
 
 function processNode($node, $outputAcc, $currentLevel, $currentNamespace)
@@ -236,6 +281,10 @@ function processNode($node, $outputAcc, $currentLevel, $currentNamespace)
     {
         $nodeProcessor = new CheckboxProcessor($node, $currentNamespace);
     }
+    else if ($nodeType === 'radio')
+    {
+        $nodeProcessor = new RadioProcessor($node, $currentNamespace);
+    }
     else
     {
         $nodeProcessor = new DefaultProcessor($node, $currentNamespace);
@@ -265,8 +314,6 @@ function processJSON($json)
 }
 
 echo processJSON($json);
-
-// header('Content-Type: text/html; charset=utf-8'); riesgo-exposicion_lactante__jarabe-de-maiz
 
 ?>
 
