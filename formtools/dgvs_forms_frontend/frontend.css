@@ -1,4 +1,8 @@
 body {
+    --dominant-bg-color: #FDEEDC;
+    --dominant-fg-color: #FFD8A9;
+    --texture-color: #F1A661;
+    --accent-color: #E38B29;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -7,11 +11,16 @@ body {
     /* rows / cols */
 }
 
+body>header{
+    grid-column: 1 / -1;
+    background-color: var(--dominant-fg-color);
+}
+
 body>nav {
     grid-area: 2 / 1 / span 1 / span 1;
     display: flex;
     flex-direction: column;
-    background-color: #107cbb;
+    background-color: var(--dominant-fg-color);
 }
 
 body>nav>.nav-option {
@@ -20,16 +29,16 @@ body>nav>.nav-option {
     align-items: center;
     width: 100%;
     padding: 1rem 0;
-    background-color: #107cbb;
+    background-color: var(--dominant-fg-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
-    color: #050505;
+    color: black;
     text-decoration: none;
     transform: background-color 1s ease-in-out;
 }
 
 body>nav>.nav-option:hover {
-    background-color: #6ec3f5;
+    background-color: var(--texture-color);
 }
 
 body>nav>.nav-option>img {
@@ -38,7 +47,7 @@ body>nav>.nav-option>img {
 
 body>main {
     grid-area: 2 / 2 / span 1 / span 1;
-    background-color: #f5f5f5;
+    background-color: var(--dominant-bg-color);
     display: grid;
     grid-template: 50px 1fr / 300px 1fr;
     gap: .5rem;
@@ -47,14 +56,15 @@ body>main {
 
 body>main>header {
     grid-area: 1 / 1/ span 1 / -1;
-    background-color: aqua;
+    background-color: var(--dominant-fg-color);
 }
 
 body>main>aside {
     position: sticky;
     top: .5rem;
     align-self: start;
-    background-color: red;
+    background-color: var(--dominant-fg-color);
+    border-radius: 0.5rem;
 }
 
 body>main>aside>.accordion {
@@ -68,7 +78,8 @@ body>main>aside>.accordion>div {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background-color: #009578;
+    background-color: var(--texture-color);
+    border-radius: 0.3rem 0.3rem 0 0;
 }
 
 body>main>aside>.accordion input {
@@ -77,13 +88,14 @@ body>main>aside>.accordion input {
 
 body>main>aside>.accordion label {
     padding: 0.8rem;
-    color: #ffffff;
+    color: black;
     font-weight: 500;
     cursor: pointer;
 }
 
 body>main>aside>.accordion label:hover {
-    background-color: #00b39e;
+    background-color: var(--accent-color);
+    border-radius: 0.3rem 0.3rem 0 0;
 }
 
 body>main>aside>.accordion .content {
@@ -92,8 +104,8 @@ body>main>aside>.accordion .content {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    padding: 0 1rem;
-    background-color: rgb(218, 218, 218);
+    padding: 0 0.5rem;
+    border-top: solid 2px var(--accent-color);
 }
 
 body>main>aside>.accordion input:checked~.content {
@@ -101,25 +113,25 @@ body>main>aside>.accordion input:checked~.content {
 }
 
 body>main>aside>.accordion .content>button:first-child {
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
 }
 
 body>main>aside>.accordion .content>button:last-child {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 body>main>aside>.accordion .content>button {
     padding: 0.4rem;
-    background-color: #b3b3b3;
+    background-color: var(--texture-color);
     color: #000000;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: left;
     cursor: pointer;
     border: none;
 }
 
 body>main>aside>.accordion .content>button:hover {
-    background-color: #888888;
+    background-color: var(--accent-color);
 }
 
 body>main>aside>.accordion .content>button>img {
@@ -129,7 +141,7 @@ body>main>aside>.accordion .content>button>img {
 body>main>section {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
-    background-color: white;
+    background-color: var(--dominant-bg-color);
 }
 
 body>main>section>form {
