@@ -1,0 +1,511 @@
+{
+    "_node_type": "section",
+    "_attr": {
+        "title": "The title of the page",
+        "namespace": ""
+    },
+    "_children": [
+        {
+            "_node_type": "section",
+            "_attr": {
+                "title": "Datos Generales del Paciente",
+                "namespace": "datos-paciente"
+            },
+            "_children": [
+                {
+                    "_node_type": "ci_paciente",
+                    "_attr": {
+                        "label": "Cédula de Identidad del Paciente",
+                        "name": "ci-paciente"
+                    }
+                }
+            ]
+        },
+        {
+            "_node_type": "section",
+            "_attr": {
+                "title": "Datos Generales del Notificante",
+                "namespace": "datos-notificante"
+            },
+            "_children": [
+                {
+                    "_node_type": "ci_notificante",
+                    "_attr": {
+                        "label": "Cédula de Identidad del Notificante",
+                        "name": "ci-notificante"
+                    }
+                }
+            ]
+        },
+        {
+            "_node_type": "section",
+            "_attr": {
+                "title": "Antecedentes de Riesgo y Exposición",
+                "namespace": "riesgo-exposicion"
+            },
+            "_children": [
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Alimentario",
+                        "namespace": "alimentario"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Alimentos sospechosos",
+                                "name": "sospechosos"
+                            }
+                        },
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Tipo de Alimento",
+                                "name": "tipo"
+                            }
+                        },
+                        {
+                            "_node_type": "dateInput",
+                            "_attr": {
+                                "label": "Fecha de consumo",
+                                "name": "fecha"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Lactante",
+                        "namespace": "lactante"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "select",
+                            "_attr": {
+                                "label": "Tipo de Alimentación",
+                                "name": "tipo-alimentacion",
+                                "options": [
+                                    {
+                                        "value": "a-pecho",
+                                        "label": "Solo alimentación a pecho"
+                                    },
+                                    {
+                                        "value": "pecho-leche-formula",
+                                        "label": "Pecho y leche de formula"
+                                    },
+                                    {
+                                        "value": "leche-formula",
+                                        "label": "Leche de formula"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_node_type": "checkbox",
+                            "_attr": {
+                                "label": "Consumo de",
+                                "name": "consumo",
+                                "options": [
+                                    {
+                                        "value": "miel",
+                                        "label": "Miel"
+                                    },
+                                    {
+                                        "value": "jarabe-de-maiz",
+                                        "label": "Jarabe de Maíz"
+                                    },
+                                    {
+                                        "value": "infusiones-caseras",
+                                        "label": "Infusiones Caseras"
+                                    },
+                                    {
+                                        "value": "jugo",
+                                        "label": "Jugo"
+                                    },
+                                    {
+                                        "value": "cereales",
+                                        "label": "Cereales"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Por heridas",
+                        "namespace": "heridas"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "select",
+                            "_attr": {
+                                "label": "Tipo de Herida",
+                                "name": "tipo-herida",
+                                "options": [
+                                    {
+                                        "value": "accidental",
+                                        "label": "Accidental"
+                                    },
+                                    {
+                                        "value": "quirurgica",
+                                        "label": "Quirurgica"
+                                    },
+                                    {
+                                        "value": "drogas-intravenosas",
+                                        "label": "Uso de drogas intravenosas"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_node_type": "section",
+            "_attr": {
+                "title": "Antecedentes Clínicos y de Hospitalización",
+                "namespace": "antecedentes-clinicos"
+            },
+            "_children": [
+                {
+                    "_node_type": "dateInput",
+                    "_attr": {
+                        "label": "Inicio de Sintomas",
+                        "name": "inicio-sintomas"
+                    }
+                },
+                {
+                    "_node_type": "dateInput",
+                    "_attr": {
+                        "label": "Primera consulta",
+                        "name": "primera-consulta"
+                    }
+                },
+                {
+                    "_node_type": "textInput",
+                    "_attr": {
+                        "label": "Centro",
+                        "name": "centro"
+                    }
+                },
+                {
+                    "_node_type": "checkbox",
+                    "_attr": {
+                        "name": "hospitalizacion",
+                        "options": [
+                            {
+                                "value": "hospitalizacion",
+                                "label": "Hospitalizacion"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_node_type": "dateInput",
+                    "_attr": {
+                        "label": "Fecha de Hospitalización",
+                        "name": "fecha-hospitalizacion"
+                    }
+                },
+                {
+                    "_node_type": "textInput",
+                    "_attr": {
+                        "label": "Diagnostico de Ingreso",
+                        "name": "diagnostico"
+                    }
+                },
+                {
+                    "_node_type": "checkbox",
+                    "_attr": {
+                        "label": "Signos y Sintomas",
+                        "name": "signos-sintomas",
+                        "options": [
+                            {
+                                "value": "vision-borrosa",
+                                "label": "Vision Borrosa"
+                            },
+                            {
+                                "value": "disfagia",
+                                "label": "Disfagia"
+                            },
+                            {
+                                "value": "diplopia",
+                                "label": "Diplopia"
+                            },
+                            {
+                                "value": "ptosis",
+                                "label": "Ptosis palpebral bilateral"
+                            },
+                            {
+                                "value": "paralisis",
+                                "label": "Paralisis flácida descendente"
+                            },
+                            {
+                                "value": "reflejo-fotomotor",
+                                "label": "Ausencia de reflejo fotomotor"
+                            },
+                            {
+                                "value": "conciencia",
+                                "label": "Conciencia conservada"
+                            },
+                            {
+                                "value": "respiratoria",
+                                "label": "Dificultad Respiratoria"
+                            },
+                            {
+                                "value": "inapetencia",
+                                "label": "Inapetencia"
+                            },
+                            {
+                                "value": "hipotonia",
+                                "label": "Hipotonia"
+                            },
+                            {
+                                "value": "control-cefalico",
+                                "label": "Perdida del control cefálico"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_node_type": "checkbox",
+                    "_attr": {
+                        "label": "Sintomas previos al cuadro neurológico",
+                        "name": "sintomas-previos",
+                        "options": [
+                            {
+                                "value": "constipacion",
+                                "label": "Constipación"
+                            },
+                            {
+                                "value": "vertigo",
+                                "label": "Vértigo"
+                            },
+                            {
+                                "value": "nausea/vomito",
+                                "label": "Náusea/Vómitos"
+                            },
+                            {
+                                "value": "fiebre",
+                                "label": "Fiebre"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_node_type": "checkbox",
+                    "_attr": {
+                        "name": "uso-arm",
+                        "options": [
+                            {
+                                "value": "arm",
+                                "label": "Uso de ARM"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_node_type": "checkbox",
+                    "_attr": {
+                        "name": "antitoxina",
+                        "options": [
+                            {
+                                "value": "antitoxina",
+                                "label": "Antitoxina"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_node_type": "textInput",
+                    "_attr": {
+                        "label": "Demora de Administracion (horas)",
+                        "name": "demora-administracion"
+                    }
+                }
+            ]
+        },
+        {
+            "_node_type": "section",
+            "_attr": {
+                "title": "Datos de Laboratorio",
+                "namespace": "laboratorio"
+            },
+            "_children": [
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Suero",
+                        "namespace": "suero"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "dateInput",
+                            "_attr": {
+                                "label": "Fecha",
+                                "name": "fecha"
+                            }
+                        },
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Resultado",
+                                "name": "resultado"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Materia Fecal",
+                        "namespace": "fecal"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "dateInput",
+                            "_attr": {
+                                "label": "Fecha",
+                                "name": "fecha"
+                            }
+                        },
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Resultado",
+                                "name": "resultado"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Aspirado Gastrico",
+                        "namespace": "aspirado"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "dateInput",
+                            "_attr": {
+                                "label": "Fecha",
+                                "name": "fecha"
+                            }
+                        },
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Resultado",
+                                "name": "resultado"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Alimento Sospechoso",
+                        "namespace": "alimento"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "dateInput",
+                            "_attr": {
+                                "label": "Fecha",
+                                "name": "fecha"
+                            }
+                        },
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Resultado",
+                                "name": "resultado"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_node_type": "section",
+                    "_attr": {
+                        "title": "Material de Herida",
+                        "namespace": "herida"
+                    },
+                    "_children": [
+                        {
+                            "_node_type": "dateInput",
+                            "_attr": {
+                                "label": "Fecha",
+                                "name": "fecha"
+                            }
+                        },
+                        {
+                            "_node_type": "textInput",
+                            "_attr": {
+                                "label": "Resultado",
+                                "name": "resultado"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_node_type": "section",
+            "_attr": {
+                "title": "Condición de Egreso",
+                "namespace": "egreso"
+            },
+            "_children":[
+                {
+                    "_node_type": "dateInput",
+                    "_attr": {
+                        "label": "Fecha de Egreso",
+                        "name": "fecha"
+                    }
+                },
+                {
+                    "_node_type": "radio",
+                    "_attr": {
+                        "label": "Tipo de Egreso",
+                        "name": "tipo",
+                        "options": [
+                            {
+                                "value": "alta",
+                                "label": "Alta"
+                            },
+                            {
+                                "value": "traslado",
+                                "label": "Traslado"
+                            },
+                            {
+                                "value": "fallecimiento",
+                                "label": "Fallecimiento"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_node_type": "textInput",
+                    "_attr": {
+                        "label": "Establecimiento de transferencia",
+                        "name": "establecimiento"
+                    }
+                }
+            ]
+        },
+        {
+            "_node_type": "submit",
+            "_attr":{
+                "label": "Enviar",
+                "name": "submit",
+                "action": "post",
+                "target": "self"
+            }
+        }
+    ]
+}
